@@ -39,6 +39,7 @@ typing_extensions==4.11.0
 tzdata==2024.1
 uc-micro-py==1.0.3
 unicodecsv==0.14.1
+uvicorn==0.21.1
 urllib3==2.2.1
 virtualenv==20.25.3
 wrapt==1.16.0
