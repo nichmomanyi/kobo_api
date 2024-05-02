@@ -11,3 +11,7 @@ class BaseData(BaseModel):
 class Data(BaseData):
     class Config():
         orm_mode = True
+        
+class all_data(BaseData):
+    class Config():
+        orm_mode = True
