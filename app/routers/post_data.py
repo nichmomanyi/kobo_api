@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 
 router = APIRouter(
-    tags=["Data upload"]
+    tags=["Data"]
 )
 
 
@@ -20,8 +20,6 @@ def create_user(post: schemas.Data, db: Session = Depends(get_db)):
     return new_data 
 
 @router.get("/data", status_code=status.HTTP_200_OK)
-def get_data(get: schemas.all_data, db: Session = Depends(get_db)):
-    db.add(new_data)
-    db.commit()
-    db.refresh(new_data)
-    return new_data 
+def get_data(db: Session = Depends(get_db)):
+    all = db.query(models.Post).all()
+    return all

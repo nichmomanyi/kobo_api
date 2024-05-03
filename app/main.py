@@ -26,6 +26,7 @@ app.include_router(post_data.router)
 
 
 
+
 # @app.post("/new_data", status_code=status.HTTP_200_OK)
 # def create_user(post: schemas.Data, db: Session = Depends(get_db)):
 #     new_data = models.Post(**post.dict())
