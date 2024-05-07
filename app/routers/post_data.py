@@ -23,3 +23,4 @@ def create_user(post: schemas.Data, db: Session = Depends(get_db)):
 def get_data(db: Session = Depends(get_db)):
     all = db.query(models.Post).all()
     return all
+
