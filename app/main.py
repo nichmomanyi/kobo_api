@@ -20,7 +20,6 @@ app.add_middleware(
 models.Base.metadata.create_all(engine)
 
 
-
 app.include_router(post_data.router)
 
 

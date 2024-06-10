@@ -9,7 +9,6 @@ router = APIRouter(
     tags=["Data"]
 )
 
-
 @router.post("/new_data", status_code=status.HTTP_201_CREATED)
 def create_user(post: schemas.Data, db: Session = Depends(get_db)):
     new_data = models.Post(**post.dict())
